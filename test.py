@@ -7,8 +7,8 @@ class MyController(Controller):
         Controller.__init__(self, **kwargs)
 
     def on_x_release(self):
-       print("Goodbye world")
+       print("BRAKE")
 
 controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
 # you can start listening before controller is paired, as long as you pair it within the timeout window
-controller.listen(timeout=60)
+# controller.listen(timeout=60)
