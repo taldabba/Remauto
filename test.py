@@ -1,8 +1,18 @@
+from enum import Enum
 from pyPS4Controller.controller import Controller
 
 """
 JOYSTICK RANGE: -32766 --> 32767
 """
+
+class PS4_COMMAND(Enum):
+    BRAKE = 0
+    THROTTLE = 1
+    STEER_LEFT = 2
+    STEER_RIGHT = 3
+    LEFT_SIGNAL = 4
+    RIGHT_SIGNAL = 5
+    GEAR_SHIFT_MENU = 6
 
 def mapRangePS4Value(value):
         return ((100/(2**16-1))*(value))+50
